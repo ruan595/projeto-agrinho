@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Agro Forte, Futuro Sustentável</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#f4f7f2;
+      color:#333;
+      line-height:1.6;
+    }
+
+    header{
+      background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+      url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1600&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      height: 100vh;
+      color: white;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    nav{
+      position: fixed;
+      top:0;
+      width:100%;
+      background: rgba(18, 71, 24, 0.9);
+      padding:15px 40px;
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
+    }
+
+    nav h2{
+      color:#fff;
+      font-size:1.5rem;
+    }
+
+    nav ul{
+      list-style:none;
+      display:flex;
+      gap:20px;
+    }
+
+    nav ul li a{
+      text-decoration:none;
+      color:#fff;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    nav ul li a:hover{
+      color:#b7ff9f;
+    }
+
+    .hero h1{
+      font-size:3.5rem;
+      max-width:900px;
+      margin-bottom:20px;
+    }
+
+    .hero p{
+      font-size:1.3rem;
+      max-width:700px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      background:#66bb44;
+      color:white;
+      padding:15px 30px;
+      border:none;
+      border-radius:30px;
+      font-size:1rem;
+      cursor:pointer;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:#4c9631;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .sobre{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:40px;
+      align-items:center;
+    }
+
+    .sobre img{
+      width:100%;
+      border-radius:15px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .sobre-texto h2,
+    .cards h2,
+    .impacto h2,
+    .contato h2{
+      color:#1e5e20;
+      margin-bottom:20px;
+      font-size:2rem;
+    }
+
+    .cards-container{
+      display:grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap:25px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:white;
+      padding:30px;
+      border-radius:15px;
+      box-shadow:0 4px 10px rgba(0,0,0,0.1);
+      transition:0.3s;
+    }
+
+    .card:hover{
+      transform:translateY(-5px);
+    }
+
+    .card h3{
+      color:#2e7d32;
+      margin-bottom:15px;
+    }
+
+    .impacto{
+      background:#1f4d22;
+      color:white;
+      text-align:center;
+      border-radius:20px;
+      margin:50px 10%;
+      padding:60px 30px;
+    }
+
+    .impacto p{
+      max-width:800px;
+      margin:auto;
+      font-size:1.2rem;
+    }
+
+    .contato{
+      text-align:center;
+    }
+
+    .contato form{
+      max-width:600px;
+      margin:30px auto;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+    }
+
+    .contato input,
+    .contato textarea{
+      padding:15px;
+      border:1px solid #ccc;
+      border-radius:10px;
+      font-size:1rem;
+    }
+
+    .contato button{
+      background:#2e7d32;
+      color:white;
+      border:none;
+      padding:15px;
+      border-radius:10px;
+      cursor:pointer;
+      font-size:1rem;
+      transition:0.3s;
+    }
+
+    .contato button:hover{
+      background:#1b5e20;
+    }
+
+    footer{
+      background:#123d18;
+      color:white;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    @media(max-width:900px){
+      .sobre{
+        grid-template-columns:1fr;
+      }
+
+      .hero h1{
+        font-size:2.5rem;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <h2>Agro Sustentável</h2>
+
+    <ul>
+      <li><a href="#sobre">Sobre</a></li>
+      <li><a href="#praticas">Práticas</a></li>
+      <li><a href="#impacto">Impacto</a></li>
+      <li><a href="#contato">Contato</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <div class="hero">
+      <h1>Agro forte, futuro sustentável</h1>
+
+      <p>
+        Produzir alimentos com responsabilidade ambiental é o caminho
+        para garantir desenvolvimento econômico, preservação da natureza
+        e qualidade de vida para as próximas gerações.
+      </p>
+
+      <a href="#sobre" class="btn">Conheça mais</a>
+    </div>
+  </header>
+
+  <section class="sobre" id="sobre">
+    <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?q=80&w=1200&auto=format&fit=crop" alt="Plantação sustentável">
+
+    <div class="sobre-texto">
+      <h2>Produção e preservação lado a lado</h2>
+
+      <p>
+        O agronegócio moderno busca equilíbrio entre produtividade e conservação ambiental.
+        Tecnologias sustentáveis ajudam a reduzir impactos ambientais, preservar recursos naturais
+        e fortalecer a economia rural.
+      </p>
+
+      <br>
+
+      <p>
+        Investir em práticas agrícolas conscientes é garantir alimento,
+        renda e sustentabilidade para o planeta.
+      </p>
+    </div>
+  </section>
+
+  <section class="cards" id="praticas">
+    <h2 style="text-align:center;">Práticas sustentáveis no agro</h2>
+
+    <div class="cards-container">
+
+      <div class="card">
+        <h3>🌱 Agricultura de precisão</h3>
+        <p>
+          Uso inteligente de tecnologia para reduzir desperdícios,
+          melhorar a produtividade e preservar o solo.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>💧 Uso consciente da água</h3>
+        <p>
+          Sistemas de irrigação eficientes ajudam a economizar água
+          e proteger os recursos hídricos.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🌳 Preservação ambiental</h3>
+        <p>
+          Recuperação de áreas verdes e proteção da biodiversidade
+          contribuem para um campo mais equilibrado.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>♻ Energia renovável</h3>
+        <p>
+          A utilização de energia solar e biocombustíveis reduz impactos
+          ambientais e fortalece a sustentabilidade.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="impacto" id="impacto">
+    <h2>Um futuro sustentável começa agora</h2>
+
+    <p>
+      O equilíbrio entre produção agrícola e meio ambiente é essencial
+      para garantir segurança alimentar, crescimento econômico e preservação
+      dos recursos naturais para as próximas gerações.
+    </p>
+  </section>
+
+  <section class="contato" id="contato">
+    <h2>Entre em contato</h2>
+
+    <p>
+      Quer saber mais sobre sustentabilidade no agro?
+      Envie sua mensagem.
+    </p>
+
+    <form>
+      <input type="text" placeholder="Seu nome" required>
+      <input type="email" placeholder="Seu e-mail" required>
+      <textarea rows="5" placeholder="Sua mensagem"></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>
+      © 2026 Agro Sustentável | Produção responsável para um futuro melhor
+    </p>
+  </footer>
+
+</body>
+</html>
